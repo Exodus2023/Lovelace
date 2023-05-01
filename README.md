@@ -1,1 +1,39 @@
 # LOVELACE
+
+<img src="">
+
+
+A Lovelace consiste em um aplicativo multiplataforma (web e mobile) voltado
+para o mercado de serviços de beleza, tais como: cabeleireiros, manicures,
+pedicures, entre outros. Ele permite o cliente realizar o agendamento de
+consultas nos estabelecimentos de forma remota, sendo possível escolher o
+dia, a data e o local. O profissional pode cadastrar os salões, podendo ter mais
+de um cadastrado em sua conta. Há também um chat para a comunicação e
+negociação entre os clientes e profissionais, agilizando assim o atendimento
+para ambas as partes.
+
+O site contém login/cadastro e dashboard.
+
+Site construido para o projeto integrador de 2023 da FATEC Carapicuiba!
+
+### 🛠 Ferramentas Utilizadas:
+<br>
+
+<div align="center">
+   <img align="center" alt="Luigi-HTML" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+  <img align="center" alt="Luigi-CSS" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+  <img align="center" alt="Luigi-Js" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
+  <img align="center" alt="Luigi-node" height="50" width="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
+  <img align="center" alt="Luigi-mysql" height="50" width="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg">
+</div>
+
+#
+
+- 📌 Em progresso.
+
+
+- 🛠 Site Totalmente feito em HTML, CSS e JS puro.
+
+
+
+- 🔗sem link no momento
