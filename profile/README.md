@@ -1,4 +1,4 @@
-# LOVELAdfhg
+# LOVELACE
 
 <img src="logolovelace.png">
 
@@ -32,7 +32,7 @@ Site construido para o projeto integrador de 2023 da FATEC Carapicuiba!
 - 📌 Em progresso.
 
 
-- 🛠 Site Totalmente feito em HTML, CSS e JS puro.
+- 🛠 APP feito em FLUTTER e DART.
 
 
 
