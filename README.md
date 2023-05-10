@@ -1,6 +1,6 @@
 # LOVELACE
 
-<img src="logolovelace.png">
+center><img src="logolovelace.png"></center
 
 
 A Lovelace consiste em um aplicativo multiplataforma (web e mobile) voltado
