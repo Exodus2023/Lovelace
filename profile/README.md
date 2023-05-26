@@ -1,7 +1,7 @@
 # LOVELACE
-
-<img src="logolovelace.png" align="center">
-
+<div align="center">
+<img src="logolovelace.png" >
+</div>
 
 A Lovelace consiste em um aplicativo multiplataforma (web e mobile) voltado
 para o mercado de serviços de beleza, tais como: cabeleireiros, manicures,
