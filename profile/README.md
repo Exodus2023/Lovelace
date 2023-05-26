@@ -3,7 +3,7 @@
 <img src="logolovelace.png" >
 </div>
 
-A Lovelace consiste em um aplicativo multiplataforma (web e mobile) voltado
+A Lovelace consiste em um aplicativo mobile voltado
 para o mercado de serviços de beleza, tais como: cabeleireiros, manicures,
 pedicures, entre outros. Ele permite o cliente realizar o agendamento de
 consultas nos estabelecimentos de forma remota, sendo possível escolher o
