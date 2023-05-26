@@ -28,7 +28,7 @@ Site construido para o projeto integrador de 2023 da FATEC Carapicuiba!
 - 📌 Em progresso.
 
 
-- 🛠 APP feito em FLUTTER e DART.
+- 🛠 APP feito em FLUTTER, DART e MYSQL WORKBENCH.
 
 
 
