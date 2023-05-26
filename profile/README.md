@@ -12,8 +12,6 @@ de um cadastrado em sua conta. Há também um chat para a comunicação e
 negociação entre os clientes e profissionais, agilizando assim o atendimento
 para ambas as partes.
 
-O site contém login/cadastro e dashboard.
-
 Site construido para o projeto integrador de 2023 da FATEC Carapicuiba!
 
 ### 🛠 Ferramentas Utilizadas:
