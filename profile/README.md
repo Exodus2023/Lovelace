@@ -19,7 +19,7 @@ Site construido para o projeto integrador de 2023 da FATEC Carapicuiba!
 
 <div align="center">
    <img align="center" alt="Luigi-HTML" height="50" width="60" src="Dart-logo.png">
-  <img align="center" alt="Luigi-CSS" height="50" width="60" src="FlutterLogo.jpg">
+  <img align="center" alt="Luigi-CSS" height="50" width="60" src="FlutterLogo.png">
   <img align="center" alt="Luigi-Js" height="50" width="60" src="logo-mysql-workbench.jpg">
 </div>
 
