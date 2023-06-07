@@ -1,6 +1,6 @@
 # LOVELACE
 <div align="center">
-<img src="logolovelace.png" >
+<img src="logo.png" >
 </div>
 
 A Lovelace consiste em um aplicativo mobile voltado
