@@ -5,7 +5,15 @@ import 'package:lovelace/components/textfields/standart_textfield.dart';
 import '../components/buttons/large_button.dart';
 import '../components/texts/page_title.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
+
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+
+}
+
+class _LoginPageState extends State<LoginPage> {
   String email = '';
   String senha = '';
 
@@ -23,7 +31,7 @@ class LoginPage extends StatelessWidget {
               child: Image.asset('assets/images/logoSemFundo.png'),
             ),
             SizedBox(
-              height: MediaQuery.of(context).size.height/20,
+              height: MediaQuery.of(context).size.height / 20,
             ),
             StandartTextField('E-mail', false, Icon(Icons.email)),
             SizedBox(
@@ -51,7 +59,7 @@ class LoginPage extends StatelessWidget {
             ),
             GoogleButton(() => null),
             SizedBox(
-              height: MediaQuery.of(context).size.height/20,
+              height: MediaQuery.of(context).size.height / 20,
             ),
             MyTextButton('Cadastrar-se como cliente', () {
               Navigator.of(context).pushNamed('/register');
