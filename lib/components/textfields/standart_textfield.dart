@@ -13,7 +13,7 @@ class StandartTextField extends StatelessWidget {
       decoration: InputDecoration(
         prefixIcon: icon,
         labelText: text,
-        border: OutlineInputBorder(),
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(50),),
       ),
     );
   }

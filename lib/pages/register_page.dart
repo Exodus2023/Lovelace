@@ -12,7 +12,7 @@ class RegisterPage extends StatefulWidget {
 }
 
 class _RegisterPageState extends State<RegisterPage> {
-  String image = "assets/images/logo.png";
+  String image = "assets/images/logo.jpg";
 
   Widget build(BuildContext context) {
     return Scaffold(

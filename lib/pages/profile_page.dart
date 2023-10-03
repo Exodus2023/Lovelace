@@ -25,7 +25,7 @@ class  ProfilePageState extends State <ProfilePage> {
           children: [
             SizedBox(height: 60,),
             CircleAvatar(
-              backgroundImage: AssetImage('assets/images/logo.png'),
+              backgroundImage: AssetImage('assets/images/logo.jpg'),
               radius: MediaQuery.of(context).size.width/4
             ),
             SizedBox(height: 10,),

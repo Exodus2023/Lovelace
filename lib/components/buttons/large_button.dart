@@ -11,6 +11,7 @@ class LargeButton extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       child: ElevatedButton(
           onPressed: onPressed,
+          style: ElevatedButton.styleFrom(shape: StadiumBorder()),
           child: Padding(
             padding: EdgeInsets.all(18),
             child: Text(
