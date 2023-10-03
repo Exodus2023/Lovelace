@@ -12,6 +12,7 @@ class MiniButton extends StatelessWidget {
       width: MediaQuery.of(context).size.width / width,
       child: ElevatedButton(
           onPressed: onPressed,
+          style: ElevatedButton.styleFrom(shape: StadiumBorder()),
           child: Padding(
             padding: EdgeInsets.all(16),
             child: Text(

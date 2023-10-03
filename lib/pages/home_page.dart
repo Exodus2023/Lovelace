@@ -43,7 +43,7 @@ class HomePageState extends State<HomePage> {
         items: [
           BottomNavigationBarItem(
               icon: Icon(Icons.account_circle), label: "Perfil"),
-          BottomNavigationBarItem(icon: Icon(Icons.search), label: "Pesquisar"),
+          BottomNavigationBarItem(icon: Icon(Icons.business_rounded), label: "Salões"),
           BottomNavigationBarItem(icon: Icon(Icons.chat), label: "Chat"),
           BottomNavigationBarItem(
               icon: Icon(Icons.settings), label: "Configurações"),

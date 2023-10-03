@@ -18,16 +18,12 @@ class LoginPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(
-              height: 50,
-            ),
             Container(
-              width: 300,
-              height: 300,
+              width: 250,
               child: Image.asset('assets/images/logoSemFundo.png'),
             ),
             SizedBox(
-              height: 30,
+              height: MediaQuery.of(context).size.height/20,
             ),
             StandartTextField('E-mail', false, Icon(Icons.email)),
             SizedBox(
@@ -47,11 +43,15 @@ class LoginPage extends StatelessWidget {
               Navigator.of(context).pushReplacementNamed('/home');
             }),
             SizedBox(
-              height: 15,
+              height: 7,
+            ),
+            Text('Ou', style: TextStyle(fontSize: 18)),
+            SizedBox(
+              height: 7,
             ),
             GoogleButton(() => null),
             SizedBox(
-              height: 20,
+              height: MediaQuery.of(context).size.height/20,
             ),
             MyTextButton('Cadastrar-se como cliente', () {
               Navigator.of(context).pushNamed('/register');
