@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lovelace/pages/chat_page.dart';
 import 'package:lovelace/pages/profile_page.dart';
-import 'package:lovelace/pages/search_page.dart';
+import 'package:lovelace/pages/saloons_page.dart';
 import 'package:lovelace/pages/setting_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -31,7 +31,7 @@ class HomePageState extends State<HomePage> {
         controller: pc,
         children: [
           ProfilePage(),
-          SearchPage(),
+          SaloonsPage(),
           ChatPage(),
           SettingPage(),
         ],
