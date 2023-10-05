@@ -16,20 +16,30 @@ class SaloonCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         width: MediaQuery.of(context).size.width,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadiusDirectional.circular(20),
+          color: Colors.pink.shade200,
+        ),
         child: Padding(
             padding: EdgeInsets.all(8.0),
             child: Row(children: [
               Container(
                 width: 150,
                 height: 150,
-                child: Image.asset(SaloonImage),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadiusDirectional.circular(20),
+                  image: DecorationImage(image: AssetImage(SaloonImage))
+                  ),
               ),
               SizedBox(
-                width: MediaQuery.of(context).size.width - 200,
+                width: MediaQuery.of(context).size.width - 185,
                 child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Column(children: [
+                      Text(
                     SaloonName,
                     style: TextStyle(
                       fontSize: 40,
@@ -38,6 +48,8 @@ class SaloonCard extends StatelessWidget {
                   Text(
                     Saloontype,
                     style: TextStyle(fontSize: 20),
+                  ),
+                    ]),
                   ),
                   Padding(
                     padding: EdgeInsets.all(8.0),
@@ -50,7 +62,6 @@ class SaloonCard extends StatelessWidget {
                         TimeButton(time4, (){}),
                         TimeButton(time5, (){})
                       ],
-                      
                     ),
                   )
                 ],

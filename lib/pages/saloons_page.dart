@@ -17,6 +17,7 @@ class _SaloonsPageState extends State<SaloonsPage> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         centerTitle: true,
+        toolbarHeight: 80,
         title: Padding(
           padding: EdgeInsets.only(top: 10.0),
           child: SearchTextField(),

@@ -8,14 +8,15 @@ class TimeButton extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return SizedBox(
-      width: MediaQuery.of(context).size.width/10.5,
+      width: MediaQuery.of(context).size.width / 10.5,
+      height: 50,
       child: ElevatedButton(
           onPressed: onPressed,
           child: Padding(
-            padding: EdgeInsets.all(2),
+            padding: EdgeInsets.all(1),
             child: Text(
               texto,
-              style: TextStyle(fontSize: 8),
+              style: TextStyle(fontSize: 10),
             ),
           )),
     );
