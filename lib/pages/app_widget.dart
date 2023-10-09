@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-
+import 'package:lovelace/pages/cliente/home_page.dart';
+import 'package:lovelace/pages/cliente/register_page.dart';
+import 'package:lovelace/pages/profissional/profissionalRegister_page.dart';
 import 'login_page.dart';
-import 'register_page.dart';
-import 'home_page.dart';
+
 
 class AppWidget extends StatelessWidget {
   Widget build(BuildContext context) {
@@ -12,6 +13,7 @@ class AppWidget extends StatelessWidget {
       routes: {
         '/login': (context) => LoginPage(),
         '/register':(context) => RegisterPage(),
+        '/profissionalRegister': (context) => ProfissionalRegisterPage(), 
         '/home': (context) => HomePage(),
       },
     );

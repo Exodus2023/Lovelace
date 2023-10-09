@@ -63,7 +63,9 @@ class _LoginPageState extends State<LoginPage> {
             MyTextButton('Cadastrar-se como cliente', () {
               Navigator.of(context).pushNamed('/register');
             }),
-            MyTextButton('Cadastrar-se como profissional', () => null)
+            MyTextButton('Cadastrar-se como profissional', () {
+              Navigator.of(context).pushNamed('/profissionalRegister');
+            })
           ],
         ),
       ),

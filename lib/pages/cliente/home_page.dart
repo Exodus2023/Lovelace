@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:lovelace/pages/chat_page.dart';
-import 'package:lovelace/pages/profile_page.dart';
-import 'package:lovelace/pages/saloons_page.dart';
+import 'package:lovelace/pages/cliente/chat_page.dart';
+import 'package:lovelace/pages/cliente/profile_page.dart';
+import 'package:lovelace/pages/cliente/saloons_page.dart';
 import 'package:lovelace/pages/setting_page.dart';
+
 
 class HomePage extends StatefulWidget {
   @override

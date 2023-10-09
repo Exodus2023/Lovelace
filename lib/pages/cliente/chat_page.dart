@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:lovelace/components/contacts/chat_contact.dart';
 
-import '../components/contacts/chat_contact.dart';
+
 
 class ChatPage extends StatefulWidget {
   const ChatPage({super.key});
