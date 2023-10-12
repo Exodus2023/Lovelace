@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:lovelace/pages/cliente/chat_page.dart';
-import 'package:lovelace/pages/cliente/profile_page.dart';
-import 'package:lovelace/pages/cliente/saloons_page.dart';
-import 'package:lovelace/pages/setting_page.dart';
+import 'package:lovelace/pages/client/chat_page.dart';
+import 'package:lovelace/pages/client/profile_page.dart';
+import 'package:lovelace/pages/client/saloons_page.dart';
+import 'package:lovelace/pages/general/setting_page.dart';
 
 
 class HomePage extends StatefulWidget {

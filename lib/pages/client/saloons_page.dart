@@ -27,7 +27,9 @@ class _SaloonsPageState extends State<SaloonsPage> {
         padding: EdgeInsets.all(8.0),
         child:  Column(
           children: [
-            SaloonCard('assets/images/logo.jpg', 'Lovelace', 'cabeleleiro', '07:00', '09:00', '11:00', '13:00', '15:00'),
+            SaloonCard('assets/images/logo.jpg', 'Lovelace', 'cabeleleiro', 'Raposo Tavares', 156,  () {
+        Navigator.of(context).pushNamed('/SaloonPageForClient');
+      },),
           ],
          ),
       ),

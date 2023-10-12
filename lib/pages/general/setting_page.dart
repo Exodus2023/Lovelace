@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:lovelace/components/buttons/large_button.dart';
+import 'package:lovelace/components/buttons/mini_button.dart';
 
-import '../components/buttons/large_button.dart';
-import '../components/buttons/mini_button.dart';
 
 class SettingPage extends StatefulWidget {
   const SettingPage({super.key});

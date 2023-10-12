@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:lovelace/components/buttons/google_button.dart';
+import 'package:lovelace/components/buttons/large_button.dart';
 import 'package:lovelace/components/buttons/text_button.dart';
 import 'package:lovelace/components/textfields/standart_textfield.dart';
-import '../components/buttons/large_button.dart';
+
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});

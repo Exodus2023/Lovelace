@@ -1,72 +1,81 @@
 import 'package:flutter/material.dart';
-import '../buttons/time_button.dart';
 
 class SaloonCard extends StatelessWidget {
   final String SaloonImage;
   final String SaloonName;
   final String Saloontype;
-  final String time1;
-  final String time2;
-  final String time3;
-  final String time4;
-  final String time5;
+  final String SaloonStreet;
+  final int SaloonNumber;
 
-  SaloonCard(this.SaloonImage, this.SaloonName, this.Saloontype, this.time1, this.time2, this.time3, this.time4, this.time5);
+  final Function()? onTap;
+
+  SaloonCard(this.SaloonImage, this.SaloonName, this.Saloontype,
+      this.SaloonStreet, this.SaloonNumber, this.onTap);
 
   Widget build(BuildContext context) {
-    return Container(
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
-          borderRadius: BorderRadiusDirectional.circular(20),
-          color: Colors.pink.shade200,
-        ),
-        child: Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Row(children: [
-              Container(
-                width: 150,
-                height: 150,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadiusDirectional.circular(20),
-                  image: DecorationImage(image: AssetImage(SaloonImage))
-                  ),
+            borderRadius: BorderRadiusDirectional.circular(20),
+            color: Colors.pink.shade200,
+            boxShadow: kElevationToShadow[2]),
+        child: Row(
+          children: [
+            Container(
+              width: 150,
+              height: 150,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadiusDirectional.only(
+                    topStart: Radius.circular(20),
+                    bottomStart: Radius.circular(20)),
+                image: DecorationImage(image: AssetImage(SaloonImage)),
               ),
-              SizedBox(
-                width: MediaQuery.of(context).size.width - 185,
+            ),
+            Padding(
+                padding: EdgeInsets.all(10),
                 child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Column(children: [
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
                       Text(
-                    SaloonName,
-                    style: TextStyle(
-                      fontSize: 40,
-                    ),
-                  ),
-                  Text(
-                    Saloontype,
-                    style: TextStyle(fontSize: 20),
-                  ),
-                    ]),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        TimeButton(time1, (){}),
-                        TimeButton(time2, (){}),
-                        TimeButton(time3, (){}),
-                        TimeButton(time4, (){}),
-                        TimeButton(time5, (){})
-                      ],
-                    ),
-                  )
-                ],
-              ),
-              ),
-            ])));
+                        SaloonName,
+                        style: TextStyle(fontSize: 35, color: Colors.white),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Row(children: [
+                        Icon(
+                          Icons.wallet,
+                          color: Colors.white,
+                        ),
+                        Text(
+                          ' $Saloontype',
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ]),
+                      Row(children: [
+                        Icon(
+                          Icons.location_on,
+                          color: Colors.white,
+                        ),
+                        Text(
+                          ' Rua $SaloonStreet, nº $SaloonNumber',
+                          style: TextStyle(
+                            fontSize: 13,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ]),
+                    ]))
+          ],
+        ),
+      ),
+    );
   }
 }
