@@ -10,6 +10,10 @@ class SaloonsPage extends StatefulWidget {
 }
 
 class _SaloonsPageState extends State<SaloonsPage> {
+  List<SaloonCard> saloons = [
+     SaloonCard('assets/images/logo.jpg', 'Lovelace', 'cabeleleiro', 'Raposo Tavares', 156),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,16 +29,14 @@ class _SaloonsPageState extends State<SaloonsPage> {
       ),
       body: Padding(
         padding: EdgeInsets.all(8.0),
-        child:  Column(
-          children: [
-            SaloonCard('assets/images/logo.jpg', 'Lovelace', 'cabeleleiro', 'Raposo Tavares', 156,  () {
-        Navigator.of(context).pushNamed('/SaloonPageForClient');
-      },),
-          ],
-         ),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              ...saloons,
+            ]
+          ),
+        ),
       ),
     );
   }
 }
-
-
