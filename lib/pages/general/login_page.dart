@@ -14,8 +14,8 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  String email = '';
-  String senha = '';
+  final email = TextEditingController();
+  final password = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -33,11 +33,11 @@ class _LoginPageState extends State<LoginPage> {
             SizedBox(
               height: MediaQuery.of(context).size.height / 20,
             ),
-            StandartTextField('E-mail', false, Icon(Icons.email)),
+            StandartTextField('E-mail', false, Icon(Icons.email), email),
             SizedBox(
               height: 15,
             ),
-            StandartTextField('Senha', true, Icon(Icons.lock)),
+            StandartTextField('Senha', true, Icon(Icons.lock), password),
             SizedBox(
               height: 5,
             ),

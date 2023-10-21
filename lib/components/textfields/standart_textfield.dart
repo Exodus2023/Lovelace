@@ -4,12 +4,14 @@ class StandartTextField extends StatelessWidget {
   final String text;
   final bool password;
   final Icon icon;
+  final TextEditingController controller;
 
-  StandartTextField(this.text, this.password, this.icon);
+  StandartTextField(this.text, this.password, this.icon, this.controller);
 
   Widget build(BuildContext context) {
     return TextField(
       obscureText: password,
+      controller: controller,
       decoration: InputDecoration(
         prefixIcon: icon,
         labelText: text,
