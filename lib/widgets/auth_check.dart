@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:lovelace/pages/home_page.dart';
+import 'package:lovelace/pages/client/home_page.dart';
 import 'package:lovelace/services/auth_service.dart';
 import 'package:provider/provider.dart';
 
-import '../pages/login_page.dart';
+import '../pages/general/login_page.dart';
 
 class AuthCheck extends StatefulWidget {
   const AuthCheck({super.key});
