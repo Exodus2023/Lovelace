@@ -7,8 +7,6 @@ class SaloonCard extends StatelessWidget {
   final String SaloonStreet;
   final int SaloonNumber;
 
-  //final Function()? onTap;
-
   SaloonCard(this.SaloonImage, this.SaloonName, this.Saloontype,
       this.SaloonStreet, this.SaloonNumber);
 
