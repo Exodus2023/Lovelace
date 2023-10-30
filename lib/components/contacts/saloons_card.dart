@@ -12,9 +12,7 @@ class SaloonCard extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        Navigator.of(context).pushNamed('/saloonPageForClient');
-      },
+      onTap: (){Navigator.of(context).pushNamed('/saloonPageForClient');},
       child: Container(
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(

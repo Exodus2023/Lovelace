@@ -10,6 +10,11 @@ class SaloonsPage extends StatefulWidget {
 }
 
 class _SaloonsPageState extends State<SaloonsPage> {
+
+  void nextPage(){
+    Navigator.of(context).pushNamed('/register');
+  }
+
   List<SaloonCard> saloons = [
      SaloonCard('assets/images/logo.jpg', 'Lovelace', 'cabeleleiro', 'Raposo Tavares', 156),
   ];

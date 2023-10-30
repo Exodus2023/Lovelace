@@ -7,7 +7,13 @@ class SaloonPageForClient extends StatefulWidget {
 }
 
 class _SaloonPageForClientState extends State<SaloonPageForClient> {
-  final now = DateTime.now();
+  var today = DateTime.now();
+
+  void _onDaySelected(DateTime day, DateTime focusedDay){
+    setState(() {
+      today = day;
+    });
+  }
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,26 +59,35 @@ class _SaloonPageForClientState extends State<SaloonPageForClient> {
           ),
           SizedBox(height: 10),
           Container(
+              decoration: BoxDecoration(
+                  border: Border.all(color: Colors.pink.shade200),
+                  borderRadius: BorderRadiusDirectional.circular(20)),
               child: Column(
-            children: [
-              Text('Agenda'),
-              SizedBox(height: 10),
-              TableCalendar(
-                firstDay: DateTime(now.year, now.month, 1),
-                lastDay: DateTime(now.year + 1, 12, 1),
-                focusedDay: now,
-                headerStyle: HeaderStyle(
-                  leftChevronVisible: false,
-                  formatButtonVisible: false,
-                  titleCentered: true,
-                ),
-                calendarStyle: CalendarStyle(
-                    outsideDaysVisible: false,
-                    selectedDecoration: BoxDecoration(color: Colors.pink.shade200),
-                    todayDecoration: BoxDecoration(color: Colors.pink.shade200)),
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  SizedBox(height: 20),
+                  Text('Agenda'),
+                  SizedBox(height: 20),
+                  TableCalendar(
+                    firstDay: DateTime(today.year, today.month, 1),
+                    lastDay: DateTime(today.year + 1, 12, 1),
+                    focusedDay: today,
+                    selectedDayPredicate: (day) => isSameDay(day, today),
+                    onDaySelected: _onDaySelected,
+                    headerStyle: HeaderStyle(
+                      leftChevronVisible: false,
+                      formatButtonVisible: false,
+                      titleCentered: true,
                     ),
-            ],
-          )),
+                    calendarStyle: CalendarStyle(
+                        outsideDaysVisible: false,
+                        selectedDecoration:
+                            BoxDecoration(color: Colors.pink.shade200),
+                        todayDecoration:
+                            BoxDecoration(color: Colors.pink.shade200)),
+                  ),
+                ],
+              )),
         ]),
       ),
     );

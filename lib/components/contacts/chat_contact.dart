@@ -8,21 +8,23 @@ class Contact extends StatelessWidget {
   Contact(this.imageAdress, this.name, this.description);
 
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Padding(
-          padding: EdgeInsets.all(2.0),
-          child: CircleAvatar(
-            backgroundImage: AssetImage(imageAdress),
-          ),
-        ),
-        Column(
+    return GestureDetector(
+        onTap: (){},
+        child: Row(
           children: [
-            Text(name),
-            Text(description),
+            Padding(
+              padding: EdgeInsets.all(2.0),
+              child: CircleAvatar(
+                backgroundImage: AssetImage(imageAdress),
+              ),
+            ),
+            Column(
+              children: [
+                Text(name),
+                Text(description),
+              ],
+            )
           ],
-        )
-      ],
-    );
+        ));
   }
 }
