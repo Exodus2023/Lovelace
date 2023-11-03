@@ -8,7 +8,7 @@ class PageTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: TextStyle(fontSize: 40, color: Colors.pink),
+      style: TextStyle(fontSize: 40, color: Colors.pink[200]),
     );
   }
 }

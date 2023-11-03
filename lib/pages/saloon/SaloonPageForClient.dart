@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:lovelace/components/dialogBoxes/confirm_box.dart';
+import 'package:lovelace/components/dialogBoxes/horary.dart';
+import 'package:lovelace/components/saloonsBoxes/days_and_hours.dart';
+import 'package:lovelace/components/saloonsBoxes/request_sent.dart';
+import 'package:lovelace/components/saloonsBoxes/saloon_description.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'package:lovelace/components/texts/page_title.dart';
 
@@ -9,10 +14,40 @@ class SaloonPageForClient extends StatefulWidget {
 class _SaloonPageForClientState extends State<SaloonPageForClient> {
   var today = DateTime.now();
 
-  void _onDaySelected(DateTime day, DateTime focusedDay){
+  String hora1 = '09:30';
+  String hora2 = '09:30';
+  String hora3 = '09:30';
+  String hora4 = '09:30';
+
+  void sentDialog(){
+     Navigator.of(context).pop();
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return RequestSent();
+        }
+    );
+  }
+
+  void confirmDialog() {
+    Navigator.of(context).pop();
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return ConfirmBox(today.day, hora1, sentDialog);
+        }
+    );
+  }
+
+  void _onDaySelected(DateTime day, DateTime focusedDay) {
     setState(() {
       today = day;
     });
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return Horary(hora1, hora2, hora3, hora4, confirmDialog);
+        });
   }
 
   Widget build(BuildContext context) {
@@ -27,36 +62,9 @@ class _SaloonPageForClientState extends State<SaloonPageForClient> {
       body: Padding(
         padding: EdgeInsets.all(8.0),
         child: ListView(children: [
-          Container(
-            width: MediaQuery.of(context).size.width,
-            height: 100,
-            decoration: BoxDecoration(
-              color: Colors.pink[200],
-              borderRadius: BorderRadiusDirectional.circular(20),
-            ),
-            child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Text('Dias de atendimento: S, T, Q, Q, S, S, D'),
-                  Text('Horários: 14:30 15:30 16:30 17:00')
-                ]),
-          ),
+          DaysAndHours(hora1, hora2, hora3, hora4),
           SizedBox(height: 10),
-          Container(
-            width: MediaQuery.of(context).size.width,
-            height: 100,
-            decoration: BoxDecoration(
-              color: Colors.pink[200],
-              borderRadius: BorderRadiusDirectional.circular(20),
-            ),
-            child: Column(children: [
-              Text(
-                'Descrição',
-                style: TextStyle(fontSize: 15),
-              ),
-              Text('texto...')
-            ]),
-          ),
+          SaloonDescrition('descrição'),
           SizedBox(height: 10),
           Container(
               decoration: BoxDecoration(
@@ -66,8 +74,9 @@ class _SaloonPageForClientState extends State<SaloonPageForClient> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   SizedBox(height: 20),
-                  Text('Agenda'),
-                  SizedBox(height: 20),
+                  Text('Agenda',
+                      style: TextStyle(fontSize: 23, color: Colors.pink[200])),
+                  SizedBox(height: 10),
                   TableCalendar(
                     firstDay: DateTime(today.year, today.month, 1),
                     lastDay: DateTime(today.year + 1, 12, 1),
@@ -75,12 +84,10 @@ class _SaloonPageForClientState extends State<SaloonPageForClient> {
                     selectedDayPredicate: (day) => isSameDay(day, today),
                     onDaySelected: _onDaySelected,
                     headerStyle: HeaderStyle(
-                      leftChevronVisible: false,
                       formatButtonVisible: false,
                       titleCentered: true,
                     ),
                     calendarStyle: CalendarStyle(
-                        outsideDaysVisible: false,
                         selectedDecoration:
                             BoxDecoration(color: Colors.pink.shade200),
                         todayDecoration:
