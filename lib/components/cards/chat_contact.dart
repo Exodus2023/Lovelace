@@ -10,21 +10,28 @@ class Contact extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
         onTap: (){},
-        child: Row(
+        child: Container(
+          decoration: BoxDecoration(
+            border: Border(bottom: BorderSide(color: Colors.black), top: BorderSide(color: Colors.black))
+          ),
+          child: Row(
           children: [
             Padding(
-              padding: EdgeInsets.all(2.0),
+              padding: EdgeInsets.all(8.0),
               child: CircleAvatar(
                 backgroundImage: AssetImage(imageAdress),
+                radius: 40,
               ),
             ),
             Column(
               children: [
-                Text(name),
+                Text(name, style: TextStyle(fontSize: 28),),
                 Text(description),
               ],
             )
           ],
-        ));
+        ),
+      )
+    );
   }
 }

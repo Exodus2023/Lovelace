@@ -16,7 +16,7 @@ class ProfileMolding extends StatelessWidget {
             alignment: Alignment.bottomRight,
             child: FloatingActionButton(
               onPressed: (){},
-              child: Icon(CupertinoIcons.camera),
+              child: Icon(CupertinoIcons.camera, color: Colors.white),
               )
           )
         ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lovelace/pages/general/colors.dart';
 
 class SaloonDescrition extends StatelessWidget {
   final String description;
@@ -8,9 +9,9 @@ class SaloonDescrition extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      height: 250,
+      height: 200,
       decoration: BoxDecoration(
-        color: Colors.pink[200],
+        color: primary,
         borderRadius: BorderRadiusDirectional.circular(20),
       ),
       child: Column(

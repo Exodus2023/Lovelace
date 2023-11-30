@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:lovelace/components/buttons/mini_button.dart';
-import 'package:lovelace/components/dialogBoxes/confirm_box.dart';
 
 class Horary extends StatelessWidget {
   final String hour1;
@@ -8,9 +7,12 @@ class Horary extends StatelessWidget {
   final String hour3;
   final String hour4;
 
-  final Function()? function;
+  final Function()? function1;
+  final Function()? function2;
+  final Function()? function3;
+  final Function()? function4;
 
-  Horary(this.hour1, this.hour2, this.hour3, this.hour4,  this.function);
+  Horary(this.hour1, this.hour2, this.hour3, this.hour4,  this.function1, this.function2, this.function3, this.function4);
 
   Widget build(BuildContext context) {
     return SimpleDialog(
@@ -42,19 +44,19 @@ class Horary extends StatelessWidget {
                   SizedBox(
                     height: 20,
                   ),
-                  MiniButton(hour1, 2, function),
+                  MiniButton(hour1, 2, function1),
                   SizedBox(
                     height: 10,
                   ),
-                  MiniButton(hour2, 2, () {}),
+                  MiniButton(hour2, 2, function2),
                   SizedBox(
                     height: 10,
                   ),
-                  MiniButton(hour3, 2, () {}),
+                  MiniButton(hour3, 2, function3),
                   SizedBox(
                     height: 10,
                   ),
-                  MiniButton(hour4, 2, () {}),
+                  MiniButton(hour4, 2, function4),
                   SizedBox(
                     height: 10,
                   ),

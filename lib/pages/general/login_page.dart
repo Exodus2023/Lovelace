@@ -4,16 +4,20 @@ import 'package:lovelace/components/buttons/large_button.dart';
 import 'package:lovelace/components/buttons/text_button.dart';
 import 'package:lovelace/components/textfields/standart_textfield.dart';
 
-
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
   @override
   State<LoginPage> createState() => _LoginPageState();
-
 }
 
 class _LoginPageState extends State<LoginPage> {
+  final controller1 = TextEditingController();
+  final controller2 = TextEditingController();
+
+  void login() {
+    Navigator.of(context).pushReplacementNamed('/profissionalHome');
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -26,16 +30,16 @@ class _LoginPageState extends State<LoginPage> {
           children: [
             Container(
               width: 250,
-              child: Image.asset('assets/images/logoSemFundo.png'),
+              child: Image.asset('assets/images/logo_sem_fundo.png'),
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height / 20,
             ),
-            StandartTextField('E-mail', false, Icon(Icons.email)),
+            StandartTextField('E-mail', false, Icon(Icons.email), controller1),
             SizedBox(
               height: 15,
             ),
-            StandartTextField('Senha', true, Icon(Icons.lock)),
+            StandartTextField('Senha', true, Icon(Icons.lock), controller2),
             SizedBox(
               height: 5,
             ),
@@ -45,13 +49,11 @@ class _LoginPageState extends State<LoginPage> {
             SizedBox(
               height: 30,
             ),
-            LargeButton('Entrar', () {
-              Navigator.of(context).pushReplacementNamed('/home');
-            }),
+            LargeButton('Entrar', login),
             SizedBox(
               height: 7,
             ),
-            Text('Ou', style: TextStyle(fontSize: 18)),
+            Text('ou', style: TextStyle(fontSize: 18)),
             SizedBox(
               height: 7,
             ),

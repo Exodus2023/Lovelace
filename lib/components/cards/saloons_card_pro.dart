@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:lovelace/pages/general/colors.dart';
 
-class SaloonCard extends StatelessWidget {
+class SaloonCardPro extends StatelessWidget {
   final String SaloonImage;
   final String SaloonName;
   final String Saloontype;
   final String SaloonStreet;
   final int SaloonNumber;
 
-  SaloonCard(this.SaloonImage, this.SaloonName, this.Saloontype,
+  SaloonCardPro(this.SaloonImage, this.SaloonName, this.Saloontype,
       this.SaloonStreet, this.SaloonNumber);
 
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class SaloonCard extends StatelessWidget {
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
             borderRadius: BorderRadiusDirectional.circular(20),
-            color: Colors.pink.shade200,
+            color: primary,
             boxShadow: kElevationToShadow[2]),
         child: Row(
           children: [
@@ -34,19 +35,25 @@ class SaloonCard extends StatelessWidget {
             Padding(
                 padding: EdgeInsets.all(10),
                 child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        SaloonName,
-                        style: TextStyle(fontSize: 35, color: Colors.white),
+                      Row(
+                        children: [
+                          Text(
+                            SaloonName,
+                            style: TextStyle(fontSize: 25, color: Colors.white),
+                          ),
+                          SizedBox(width: 22,),
+                          IconButton(onPressed: (){}, icon: Icon(Icons.edit), iconSize: 32, color: Colors.white,),
+                          IconButton(onPressed: (){}, icon: Icon(Icons.delete), iconSize: 32, color: Colors.white),
+                        ],
                       ),
                       SizedBox(
                         height: 10,
                       ),
                       Row(children: [
                         Icon(
-                          Icons.wallet,
+                          Icons.business_center_sharp,
                           color: Colors.white,
                         ),
                         Text(

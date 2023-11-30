@@ -1,21 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:lovelace/pages/general/chat_page.dart';
-import 'package:lovelace/pages/client/profile_page.dart';
-import 'package:lovelace/pages/client/saloons_page.dart';
 import 'package:lovelace/pages/general/setting_page.dart';
+import 'package:lovelace/pages/professional/profile_page_pro.dart';
+import 'package:lovelace/pages/professional/solicitations_page.dart';
 
-
-class HomePage extends StatefulWidget {
-  @override
-  State<HomePage> createState() => HomePageState();
+class HomePagePro extends StatefulWidget {
+  State<HomePagePro> createState() => HomePageProState();
 }
 
-class HomePageState extends State<HomePage> {
+class HomePageProState extends State<HomePagePro> {
   int pageIndex = 0;
   late PageController pc;
 
   void initState() {
-    super.initState();
+    super.initState;
     pc = PageController(initialPage: pageIndex);
   }
 
@@ -25,26 +23,26 @@ class HomePageState extends State<HomePage> {
     });
   }
 
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: PageView(
-        controller: pc,
         children: [
-          ProfilePage(),
-          SaloonsPage(),
+          ProfilePagePro(),
+          SolicitationsPage(),
           ChatPage(),
-          SettingPage(),
+          SettingPage()
         ],
+        controller: pc,
         onPageChanged: setPage,
       ),
       bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
         currentIndex: pageIndex,
+        type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(
               icon: Icon(Icons.account_circle), label: "Perfil"),
-          BottomNavigationBarItem(icon: Icon(Icons.business_rounded), label: "Salões"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.people), label: "Solicitações"),
           BottomNavigationBarItem(icon: Icon(Icons.chat), label: "Chat"),
           BottomNavigationBarItem(
               icon: Icon(Icons.settings), label: "Configurações"),

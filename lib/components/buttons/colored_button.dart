@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
-class MiniButton extends StatelessWidget {
+class ColoredButton extends StatelessWidget {
   final String texto;
-  final double width;
+  final Color color;
   final Function()? onPressed;
 
-  MiniButton(this.texto, this.width, this.onPressed);
+  ColoredButton(this.texto, this.color, this.onPressed);
 
   Widget build(BuildContext context) {
     return SizedBox(
-      width: MediaQuery.of(context).size.width / width,
+      width: 150,
       child: ElevatedButton(
           onPressed: onPressed,
-          style: ElevatedButton.styleFrom(shape: StadiumBorder()),
+          style: ElevatedButton.styleFrom(shape: StadiumBorder(), backgroundColor: color),
           child: Padding(
             padding: EdgeInsets.all(16),
             child: Text(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lovelace/components/buttons/mini_button.dart';
+import 'package:lovelace/pages/general/colors.dart';
 
 class ConfirmBox extends StatelessWidget {
   final todayDay;
@@ -16,7 +17,7 @@ class ConfirmBox extends StatelessWidget {
         child: Icon(Icons.check_circle_outline, color: Colors.white, size: 75),
         alignment: Alignment.center,
         decoration: BoxDecoration(
-          color: Colors.pink.shade200,
+          color: primary,
           borderRadius: BorderRadius.only(
               topLeft: Radius.circular(20), topRight: Radius.circular(20)),
         ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lovelace/pages/general/colors.dart';
 
 class DaysAndHours extends StatelessWidget {
   final String hour1;
@@ -13,7 +14,7 @@ class DaysAndHours extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       height: 100,
       decoration: BoxDecoration(
-        color: Colors.pink[200],
+        color: primary,
         borderRadius: BorderRadiusDirectional.circular(20),
       ),
       child:

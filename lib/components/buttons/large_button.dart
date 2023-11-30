@@ -16,7 +16,7 @@ class LargeButton extends StatelessWidget {
             padding: EdgeInsets.all(18),
             child: Text(
               text,
-              style: TextStyle(fontSize: 18),
+              style: TextStyle(fontSize: 18, color: Colors.white),
             ),
           )),
     );

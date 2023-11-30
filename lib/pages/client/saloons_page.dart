@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lovelace/components/contacts/saloons_card.dart';
+import 'package:lovelace/components/cards/saloons_card.dart';
 import 'package:lovelace/components/textfields/search_textfield.dart';
 
 class SaloonsPage extends StatefulWidget {
@@ -16,7 +16,7 @@ class _SaloonsPageState extends State<SaloonsPage> {
   }
 
   List<SaloonCard> saloons = [
-     SaloonCard('assets/images/logo.jpg', 'Lovelace', 'cabeleleiro', 'Raposo Tavares', 156),
+     SaloonCard('assets/images/logo.jpg', 'Lovelace', 'Manicure', 'Raposo Tavares', 156),
   ];
 
   @override
@@ -29,7 +29,7 @@ class _SaloonsPageState extends State<SaloonsPage> {
         toolbarHeight: 80,
         title: Padding(
           padding: EdgeInsets.only(top: 10.0),
-          child: SearchTextField(),
+          child: SearchTextField('Pesquisar salões'),
         ),
       ),
       body: Padding(

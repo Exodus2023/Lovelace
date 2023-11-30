@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lovelace/components/buttons/large_button.dart';
 import 'package:lovelace/components/buttons/mini_button.dart';
+import 'package:lovelace/components/texts/page_title.dart';
 
 
 class SettingPage extends StatefulWidget {
@@ -15,7 +16,11 @@ class _SettingPageState extends State<SettingPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Configurações"),
+          title: PageTitle("Configurações"),
+          centerTitle: true,
+          elevation: 0,
+          
+          backgroundColor: Colors.transparent,
         ),
         body: Container(
           width: MediaQuery.of(context).size.width,
@@ -34,7 +39,7 @@ class _SettingPageState extends State<SettingPage> {
                     MiniButton("Sair", 2.5, () {
                       Navigator.of(context).pushReplacementNamed('/login');
                     }),
-                    MiniButton("Excluir Conta", 2.5, () {}),
+                    MiniButton("Excluir Conta", 2.2, () {}),
                   ],
                 )
               ],

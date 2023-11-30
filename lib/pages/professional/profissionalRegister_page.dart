@@ -8,11 +8,13 @@ class ProfissionalRegisterPage extends StatefulWidget {
   const ProfissionalRegisterPage({super.key});
 
   @override
-  State<ProfissionalRegisterPage> createState() => _ProfissionalRegisterPageState();
+  State<ProfissionalRegisterPage> createState() =>
+      _ProfissionalRegisterPageState();
 }
 
 class _ProfissionalRegisterPageState extends State<ProfissionalRegisterPage> {
   String image = "assets/images/logo.jpg";
+  TextEditingController controller = TextEditingController();
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,23 +37,24 @@ class _ProfissionalRegisterPageState extends State<ProfissionalRegisterPage> {
               SizedBox(
                 height: 30,
               ),
-              StandartTextField('Nome completo', false, Icon(Icons.person)),
+              StandartTextField(
+                  'Nome completo', false, Icon(Icons.person), controller),
               SizedBox(
                 height: 15,
               ),
-              StandartTextField('E-mail', false, Icon(Icons.email)),
+              StandartTextField('E-mail', false, Icon(Icons.email), controller),
               SizedBox(
                 height: 15,
               ),
-              StandartTextField('Numero de telefone', false, Icon(Icons.call)),
+              StandartTextField('Numero de telefone', false, Icon(Icons.call), controller),
               SizedBox(
                 height: 15,
               ),
-              StandartTextField('Endereço', false, Icon(Icons.gite)),
+              StandartTextField('cep', false, Icon(Icons.gite), controller),
               SizedBox(
                 height: 15,
               ),
-              StandartTextField('Senha', true, Icon(Icons.lock)),
+              StandartTextField('Senha', true, Icon(Icons.lock), controller),
               SizedBox(
                 height: 30,
               ),

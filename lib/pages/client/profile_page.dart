@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:lovelace/components/buttons/large_button.dart';
-import 'package:lovelace/components/imageMoldings/profile_molding.dart';
 import 'package:lovelace/components/textfields/profile_textfield.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -10,7 +9,7 @@ class ProfilePage extends StatefulWidget {
   State <ProfilePage> createState() =>  ProfilePageState();
 }
 
-class  ProfilePageState extends State <ProfilePage> {
+class ProfilePageState extends State <ProfilePage> {
 
   String nome = "Waldir Brás";
   String email = "waldizbras@gmail.com";
