@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:lovelace/components/buttons/colored_button.dart';
-import 'package:lovelace/components/buttons/mini_button.dart';
 import 'package:lovelace/pages/general/colors.dart';
 
 class SolicitationsCard extends StatelessWidget {

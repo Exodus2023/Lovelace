@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lovelace/pages/client/home_page.dart';
 import 'package:lovelace/pages/client/register_page.dart';
+import 'package:lovelace/pages/general/talk_page.dart';
 import 'package:lovelace/pages/professional/home_page_pro.dart';
 import 'package:lovelace/pages/professional/profile_page_pro.dart';
 import 'package:lovelace/pages/professional/profissionalRegister_page.dart';
@@ -27,6 +28,7 @@ class AppWidget extends StatelessWidget {
         '/profissionalHome': (context) => HomePagePro(),
         '/saloonRegister':(context) => SaloonRegisterPage(),
         '/profissionalProfilePage':(context) => ProfilePagePro(),
+        '/talkPage': (context) => TalkPage()
       },
     );
   }

@@ -19,6 +19,10 @@ class _LoginPageState extends State<LoginPage> {
     Navigator.of(context).pushReplacementNamed('/profissionalHome');
   }
 
+  void login2() {
+    Navigator.of(context).pushReplacementNamed('/clientHome');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,7 +61,7 @@ class _LoginPageState extends State<LoginPage> {
             SizedBox(
               height: 7,
             ),
-            GoogleButton(() => null),
+            GoogleButton(login2),
             SizedBox(
               height: MediaQuery.of(context).size.height / 20,
             ),
